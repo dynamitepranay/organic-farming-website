@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farming Quiz - Test Your Knowledge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .quiz-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .question h3 {
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .option {
+            padding: 0.75rem;
+            margin: 0.25rem 0;
+            background: #f0f0f0;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option:hover {
+            background: #e0e0e0;
+            border-color: #2c5530;
+        }
+        
+        .option input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+        
+        .submit-btn {
+            background: #2c5530;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #1e3d22;
+        }
+        
+        .result {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+        
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+        
+        .result-message {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .restart-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .restart-btn:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Organic Farming Project</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="project.html" class="nav-link">Project</a></li>
+                <li><a href="quiz.html" class="nav-link active">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Knowledge Hub</a></li>
+                <li><a href="survey.html" class="nav-link">Survey</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Organic Farming Knowledge Quiz</h1>
+                <p class="hero-subtitle">Test your knowledge about sustainable organic farming practices</p>
+            </div>
+        </section>
+
+        <div class="quiz-container">
+            <form id="quizForm">
+                <!-- Question 1 -->
+                <div class="question">
+                    <h3>1. What is the primary goal of organic farming?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="a"> Maximize crop yield using synthetic fertilizers
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="b"> Maintain soil health and ecological balance
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="c"> Reduce farming costs through chemical pesticides
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="d"> Focus solely on profit maximization
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question">
+                    <h3>2. Which of the following is NOT allowed in organic farming?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="a"> Compost
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="b"> Synthetic pesticides
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="c"> Crop rotation
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="d"> Green manure
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question">
+                    <h3>3. What is crop rotation primarily used for?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a"> Increasing farm aesthetic appeal
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b"> Preventing soil depletion and pest buildup
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c"> Making harvesting easier
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="d"> Reducing water usage
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question">
+                    <h3>4. What is green manure?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="a"> Animal waste used as fertilizer
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="b"> Crops grown specifically to be plowed back into soil
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="c"> Artificial fertilizer with green coloring
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="d"> Compost made from kitchen waste
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question">
+                    <h3>5. Which practice helps control pests naturally in organic farming?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a"> Using beneficial insects
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b"> Daily pesticide spraying
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c"> Genetically modified seeds
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="d"> Chemical herbicides
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question">
+                    <h3>6. What is the main benefit of composting in organic farming?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="a"> Reduces farm waste and enriches soil
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="b"> Increases chemical fertilizer effectiveness
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="c"> Speeds up plant growth artificially
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="d"> Eliminates need for watering
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question">
+                    <h3>7. How does organic farming benefit the environment?</h3>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="a"> Increases water pollution from runoff
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="b"> Reduces biodiversity and soil health
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="c"> Promotes biodiversity and reduces chemical pollution
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="d"> Requires more energy than conventional farming
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Quiz</button>
+            </form>
+
+            <div id="result" class="result">
+                <div class="score" id="scoreDisplay"></div>
+                <div class="result-message" id="resultMessage"></div>
+                <button type="button" class="restart-btn" onclick="restartQuiz()">Try Again</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Organic Farming Community Project. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Quiz answers
+        const correctAnswers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'b',
+            q5: 'a',
+            q6: 'a',
+            q7: 'c'
+        };
+
+        // Handle form submission
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            
+            // Check answers
+            for (let question in correctAnswers) {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[question]) {
+                    score++;
+                }
+            }
+            
+            // Calculate percentage
+            const percentage = Math.round((score / totalQuestions) * 100);
+            
+            // Display result
+            const resultDiv = document.getElementById('result');
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const resultMessage = document.getElementById('resultMessage');
+            
+            scoreDisplay.textContent = `Your Score: ${score}/${totalQuestions} (${percentage}%)`;
+            
+            // Set result message based on score
+            if (percentage >= 90) {
+                resultMessage.innerHTML = `
+                    <h3>🌟 Excellent!</h3>
+                    <p>You're an organic farming expert! Your knowledge of sustainable agriculture practices is outstanding. Keep up the great work in promoting organic farming!</p>
+                `;
+            } else if (percentage >= 70) {
+                resultMessage.innerHTML = `
+                    <h3>👍 Great Job!</h3>
+                    <p>You have a solid understanding of organic farming principles. There's always more to learn, but you're on the right track!</p>
+                `;
+            } else if (percentage >= 50) {
+                resultMessage.innerHTML = `
+                    <h3>🌱 Good Effort!</h3>
+                    <p>You have some knowledge about organic farming. Consider exploring our Knowledge Hub to learn more about sustainable agriculture practices.</p>
+                `;
+            } else {
+                resultMessage.innerHTML = `
+                    <h3>📚 Keep Learning!</h3>
+                    <p>Organic farming has many fascinating aspects. Visit our Knowledge Hub and resources section to expand your understanding of sustainable agriculture.</p>
+                `;
+            }
+            
+            resultDiv.style.display = 'block';
+            document.getElementById('quizForm').style.display = 'none';
+            
+            // Scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Restart quiz function
+        function restartQuiz() {
+            document.getElementById('quizForm').reset();
+            document.getElementById('quizForm').style.display = 'block';
+            document.getElementById('result').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

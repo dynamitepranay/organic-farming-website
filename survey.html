@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Farming Survey</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function showThankYouMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Thank you for your feedback!");
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Organic Farming Project</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="project.html" class="nav-link">Project</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link">Knowledge Hub</a></li>
+                <li><a href="survey.html" class="nav-link active">Survey</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="survey">
+            <div class="container">
+                <h1>Organic Farming Survey</h1>
+                <p>We would love to know your thoughts on organic farming! Please take a minute to fill out this survey.</p>
+                <form onsubmit="showThankYouMessage(event)">
+                    <div class="form-group">
+                        <label for="name">Name (optional):</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email (optional):</label>
+                        <input type="email" id="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Do you know about organic farming?</label>
+                        <div>
+                            <input type="radio" id="yes" name="knowledge" value="yes">
+                            <label for="yes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="no" name="knowledge" value="no">
+                            <label for="no">No</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="maybe" name="knowledge" value="maybe">
+                            <label for="maybe">Maybe</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Would you prefer organic products over chemical-based ones?</label>
+                        <div>
+                            <input type="radio" id="pref_yes" name="preference" value="yes">
+                            <label for="pref_yes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pref_no" name="preference" value="no">
+                            <label for="pref_no">No</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pref_maybe" name="preference" value="maybe">
+                            <label for="pref_maybe">Maybe</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Which crops do you think can be grown organically?</label>
+                        <div>
+                            <input type="checkbox" id="vegetables" name="crops" value="vegetables">
+                            <label for="vegetables">Vegetables</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="fruits" name="crops" value="fruits">
+                            <label for="fruits">Fruits</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="grains" name="crops" value="grains">
+                            <label for="grains">Grains</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="pulses" name="crops" value="pulses">
+                            <label for="pulses">Pulses</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="others" name="crops" value="others">
+                            <label for="others">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>How important do you think organic farming is for the future?</label>
+                        <div>
+                            <input type="radio" id="rating1" name="importance" value="1">
+                            <label for="rating1">1</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating2" name="importance" value="2">
+                            <label for="rating2">2</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating3" name="importance" value="3">
+                            <label for="rating3">3</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating4" name="importance" value="4">
+                            <label for="rating4">4</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rating5" name="importance" value="5">
+                            <label for="rating5">5</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Additional Comments:</label>
+                        <textarea id="comments" name="comments" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Organic Farming Community Project. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub - Organic Farming Resources</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .resources-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-title {
+            color: #2c5530;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .tips-section, .links-section, .facts-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .tip-card {
+            background: #f8fff8;
+            padding: 1.5rem;
+            border-left: 4px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        .tip-card h4 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .link-card {
+            background: #f0f8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .link-card a {
+            color: #2c5530;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-card a:hover {
+            color: #4CAF50;
+        }
+
+        .facts-container {
+            background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .fact-display {
+            font-size: 1.3rem;
+            color: #2c5530;
+            margin: 1rem 0;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fact-controls {
+            margin-top: 1rem;
+        }
+
+        .fact-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            margin: 0 0.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .fact-btn:hover {
+            background: #45a049;
+        }
+
+        .auto-rotate {
+            background: #2c5530;
+        }
+
+        .section-subtitle {
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .youtube-links {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #fff5f5;
+            border-radius: 8px;
+        }
+
+        .youtube-links h4 {
+            color: #d32f2f;
+            margin-bottom: 0.5rem;
+        }
+
+        .youtube-links a {
+            color: #d32f2f;
+            display: block;
+            margin: 0.5rem 0;
+            text-decoration: none;
+        }
+
+        .youtube-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Organic Farming Project</div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="project.html" class="nav-link">Project</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+                <li><a href="resources.html" class="nav-link active">Knowledge Hub</a></li>
+                <li><a href="survey.html" class="nav-link">Survey</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Knowledge Hub</h1>
+                <p class="hero-subtitle">Your comprehensive guide to organic farming resources and tips</p>
+            </div>
+        </section>
+
+        <div class="resources-container">
+            <!-- Tips Section -->
+            <section class="tips-section">
+                <h2 class="section-title">🌱 Home Organic Gardening Tips</h2>
+                <p class="section-subtitle">Start your own organic garden with these practical tips</p>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>Start with Easy Crops</h4>
+                        <p>Begin with herbs like basil, mint, and coriander. They're forgiving and grow quickly, giving you confidence to expand to vegetables.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Make Your Own Compost</h4>
+                        <p>Collect kitchen scraps (vegetable peels, coffee grounds) and dry leaves. Layer them in a bin and turn regularly for rich, free fertilizer.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Natural Pest Control</h4>
+                        <p>Use neem oil spray, garlic-pepper solution, or introduce beneficial insects like ladybugs. Avoid chemical pesticides completely.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Water Wisely</h4>
+                        <p>Water early morning or evening to reduce evaporation. Use mulch around plants to retain moisture and suppress weeds naturally.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Companion Planting</h4>
+                        <p>Plant marigolds with tomatoes to repel pests, or grow basil near peppers to enhance flavor and growth naturally.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <h4>Soil Health First</h4>
+                        <p>Test your soil pH and add organic matter regularly. Healthy soil means healthy plants and better resistance to diseases.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- External Links Section -->
+            <section class="links-section">
+                <h2 class="section-title">🔗 Essential Resources</h2>
+                <p class="section-subtitle">Trusted sources for organic farming information</p>
+                
+                <div class="links-grid">
+                    <div class="link-card">
+                        <a href="https://organicfarming.dac.gov.in/" target="_blank" rel="noopener">
+                            <h4>Government of India Portal</h4>
+                        </a>
+                        <p>Official portal for organic farming schemes, certification, and guidelines in India</p>
+                    </div>
+                    
+                    <div class="link-card">
+                        <a href="https://www.fao.org/organicag/en/" target="_blank" rel="noopener">
+                            <h4>FAO Organic Agriculture</h4>
+                        </a>
+                        <p>Global resources on organic farming from the Food and Agriculture Organization</p>
+                    </div>
+                    
+                    <div class="link-card">
+                        <a href="https://www.youtube.com/watch?v=Zbe7jQv8D8M" target="_blank" rel="noopener">
+                            <h4>Organic Farming Basics</h4>
+                        </a>
+                        <p>Comprehensive YouTube tutorial on starting organic farming at home</p>
+                    </div>
+                    
+                    <div class="link-card">
+                        <a href="https://www.youtube.com/watch?v=7tC0vM8h20Y" target="_blank" rel="noopener">
+                            <h4>Zero Budget Natural Farming</h4>
+                        </a>
+                        <p>Learn Subhash Palekar's natural farming techniques for sustainable agriculture</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fun Facts Section -->
+            <section class="facts-section">
+                <h2 class="section-title">🎯 Fun Facts About Organic Farming</h2>
+                <p class="section-subtitle">Discover amazing facts about sustainable agriculture</p>
+                
+                <div class="facts-container">
+                    <div class="fact-display" id="factDisplay">
+                        Click the buttons below to explore interesting organic farming facts!
+                    </div>
+                    
+                    <div class="fact-controls">
+                        <button class="fact-btn" onclick="showPreviousFact()">← Previous</button>
+                        <button class="fact-btn" onclick="showNextFact()">Next →</button>
+                        <button class="fact-btn auto-rotate" onclick="toggleAutoRotate()" id="autoBtn">Auto Rotate</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 College Project | Developed by Engineering Students</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Fun facts array
+        const funFacts = [
+            "🌱 Organic farms use 45% less energy than conventional farms while producing similar yields!",
+            "🐝 Organic farming supports 30% more biodiversity including bees, butterflies, and birds!",
+            "💧 Organic soil can hold up to 30% more water, making crops more drought-resistant!",
+            "🥬 Organic vegetables often contain 20-40% more antioxidants than conventionally grown ones!",
+            "🌾 India has over 2.5 million organic farmers - the highest in the world!",
+            "🦋 A single teaspoon of organic soil contains more microorganisms than there are people on Earth!",
+            "🍅 Organic tomatoes have been found to contain 50% more vitamin C than conventional ones!",
+            "🌿 Organic farming can reduce carbon emissions by up to 40% compared to conventional methods!",
+            "🥕 Organic carrots often taste sweeter because they grow more slowly and develop natural sugars!",
+            "🌍 If all farms went organic, we could remove 2.3 billion tons of CO2 from the atmosphere annually!"
+        ];
+
+        let currentFactIndex = 0;
+        let autoRotateInterval = null;
+
+        // Display fact function
+        function displayFact(index) {
+            const factDisplay = document.getElementById('factDisplay');
+            factDisplay.textContent = funFacts[index];
+            factDisplay.style.opacity = '0';
+            setTimeout(() => {
+                factDisplay.style.opacity = '1';
+            }, 200);
+        }
+
+        // Show next fact
+        function showNextFact() {
+            currentFactIndex = (currentFactIndex + 1) % funFacts.length;
+            displayFact(currentFactIndex);
+        }
+
+        // Show previous fact
+        function showPreviousFact() {
+            currentFactIndex = (currentFactIndex - 1 + funFacts.length) % funFacts.length;
+            displayFact(currentFactIndex);
+        }
+
+        // Toggle auto-rotate
+        function toggleAutoRotate() {
+            const autoBtn = document.getElementById('autoBtn');
+            
+            if (autoRotateInterval) {
+                clearInterval(autoRotateInterval);
+                autoRotateInterval = null;
+                autoBtn.textContent = 'Auto Rotate';
+                autoBtn.classList.remove('auto-rotate');
+            } else {
+                autoRotateInterval = setInterval(showNextFact, 3000);
+                autoBtn.textContent = 'Stop Auto';
+                autoBtn.classList.add('auto-rotate');
+            }
+        }
+
+        // Initialize with first fact
+        displayFact(0);
+
+        // Add smooth transitions
+        document.getElementById('factDisplay').style.transition = 'opacity 0.3s ease';
+    </script>
+</body>
+</html>
